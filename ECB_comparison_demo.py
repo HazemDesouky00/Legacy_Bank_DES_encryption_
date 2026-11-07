@@ -5,6 +5,7 @@ from my_des import des_ecb_encrypt, pad
  
 key = b"12345678"
 message = b"TRANSFERTRANSFER"      # two identical 8-byte blocks: "TRANSFER" + "TRANSFER"
+#message = b"123456781234567" 
  
 padded = pad(message, 8)            # what actually gets encrypted (adds one padding block)
 ciphertext = des_ecb_encrypt(message, key)
